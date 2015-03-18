@@ -1,0 +1,135 @@
+\documentclass[11pt,a4paper]{moderncv}
+
+% moderncv themes
+\moderncvtheme[blue]{casual}                  % optional argument are 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{classic}                % idem
+\usepackage[firstyear=2008,lastyear=2016]{moderntimeline}
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+%\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+
+% Hyperlinks
+%\usepackage{hyperref}								% to use hyperlinks
+%\definecolor{linkcolour}{rgb}{0,0.2,0.6}			% hyperlinks setup
+%\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+\newcommand\Colorhref[3][blue]{\href{#2}{\small\color{#1}#3}}
+
+% personal data
+\firstname{Simon}
+\familyname{Kamronn}
+\title{Curriculum Vitae}               % optional, remove the line if not wanted
+\address{Tagensvej 56, 1th}{2200 København N}    % optional, remove the line if not wanted
+\mobile{40 92 97 92}                    % optional, remove the line if not wanted
+%\phone{+30 698 4385057}                      % optional, remove the line if not wanted
+%\fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{simon@kamronn.dk}                      % optional, remove the line if not wanted
+%\homepage{http://gr.linkedin.com/pub/stefania-dakourou/41/21a/396}%{LinkedIn Profile}}                % optional, remove the line if not wanted
+%\extrainfo{additional information (optional)} % optional, remove the line if not wanted
+\photo[64pt][0.4pt]{selfie}                         % '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{Some quote (optional)}                 % optional, remove the line if not wanted
+
+% to show numerical labels in the bibliography; only useful if you make citations in your resume
+\makeatletter
+\pgfmathsetmacro\tl@textstartabove{\tl@width-1pt}
+\pgfmathsetmacro\tl@textendbelow{\tl@width-2pt}
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
+
+\tltextstart[north]{\scriptsize}
+\tltextend[south]{\scriptsize}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{Personal}
+\cvitem{Birth}{November 25, 1987, Aarhus}
+\cvitem{LinkedIn \linkedinsocialsymbol}{\Colorhref{http://www.linkedin.com/in/simonkamronn}{Simon Kamronn} - Professional profile and links.    }
+\section{Education}
+%\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+\tlcventry{2011}{2014}{Master of Science in Medicine \& Technology}{Technical University of Denmark}{}{}{} %{\textit{10.2}}{}
+\tlcventry{2008}{2011}{Bachelor of Science in Medicine \& Technology}{Technical University of Denmark}{}{}{} %{\textit{8.6}}{}  
+
+\section{Experience}
+\tlcventry{2015}{0}{PhD Student}{Technical University of Denmark}{Cognitive Systems}{Kgs. Lyngby}{Monitoring and Modeling of Behavioural Changes using Smartphone and Wearable Sensing}
+\tlcventry{2014}{2015}{Research Assistant}{DTU Compute}{Kgs. Lyngby}{}{Working on the project Neuro 24/7, long term ear-EEG monitoring. Smartphone sensor capture and processing, speaker recognition, EEG experiments}
+
+\tlcventry{2013}{2014}{Consultant}{CathVision}{Biomedical Startup}{Copenhagen}{Programming newly developed hardware to interface with PC \newline{}Consulting on development strategy and adaptive signal de-noising}
+
+\tlcventry{2013}{2015}{Co-founder}{Cortrium}{www.cortrium.com}{Copenhagen}{Working on de-noising, feature extraction and classification of two-lead wearable ECG\newline{}C programming for real-time execution on iPhone}
+
+\tlcventry{2012}{2013}{Signal Processing}{Copenhagen X-Prize Team(CXT)}{Copenhagen}{}{Feature extraction and classification of two-lead wearable ECG\newline{} Design of vital signs monitor}
+
+\tlcventry{2011}{0}{Software Developer}{Medimatic A/S}{Hellerup}{}{Developed a program for data acquisition, organisation and processing to work with a distal blood pressure measurement device in hospitals.\newline{}Demonstration, sales and technical support in most of the major hospitals in Denmark.\newline{}Various ad-hoc assignments being the only technical employee in a small company.}
+
+\tlcventry{2010}{2013}{Economics Coordinator}{IAESTE-Denmark}{Kgs. Lyngby}{}{Active member and treasurer of the International Association for the Exchange of Students for Technical Experience; responsible for fundraising and managing a budget of 600,000 kr. and weekly interaction with international trainees}
+
+\tlcventry{2010}{2012}{Student Helper}{Lærerstandens Brandforsikring}{Copenhagen}{}{Processing incoming insurance claims on bike theft}
+
+%\tldatecventry{2010}{Technical Support}{3}{Copenhagen}{}{IT-support on 3G broadband modems}
+\clearpage
+
+\section{Master Thesis}
+\cvitem{Title}{\emph{Machine Learning in Social EEG}}
+\cvitem{Supervisor}{Lars Kai Hansen}
+\cvitem{Description}{\small Made a Bayesian implementation of a correlation analysis technique to be applied on EEG. Conducted an EEG study to test for neural difference in social vs. non-social movie viewing.}
+
+%\section{Bachelor Thesis}
+%\cvitem{Title}{\emph{Design of capacitive helium level sensor and control loop}}
+%\cvitem{Supervisor}{Jan Ardenkjær-Larsen}
+%\cvitem{Description}{\small Design and test of fully automatic PID algorithm to control in-flow of liquid helium in a MRI Hyperpolarizator; LabVIEW programming} 
+
+\section{Publications}
+\cvitem{2014}{A.T. Poulsen, S. Kamronn, L. Parra, L.K. Hansen, \emph{Probabilistic Correlated Component Analysis}, In: Pattern Recognition in Neuroimaging 2014}
+
+\section{In progress}
+\cvitem{}{S. Kamronn, A.T. Poulsen, L.K. Hansen, An expansion on \emph{Probabilistic Correlated Component Analysis}}
+\cvitem{}{A.T. Poulsen, S. Kamronn, L. Parra, L.K. Hansen, \emph{Neural correlates of group joint attention}}
+
+\section{Technical reports}
+%\cvitem{{Title}}{\emph{Correlated Component Analysis: an investigation of a novel signal decomposition method}}
+%\cvitem{Collaborator}{Andreas Trier Poulsen}
+%\cvitem{Abstract}{In this paper we present an investigation of a novel signal decomposition method to extract maximally correlated signal components from datasets of different subjects. The method was proposed by Parra in an article in 2012 and was named Correlated Component Analysis (CoCA).}
+%\ \newline
+%
+%\cvitem{{Title}}{\emph{A Proposition for Probabilistic Independent Component Analysis}}
+%\cvitem{Collaborator}{Andreas Trier Poulsen}
+%\cvitem{Abstract}{In this paper we introduce a proposition for probabilistic Independent Component Analysis (pICA) based on the
+%probabilistic PCA derived by Bishop.}
+%\ \newline
+%
+\cvitem{{Title}}{\textit{ECG Artefact Reduction}}
+\cvitem{Description}{Decomposing 3-lead ECG signals with independent component analysis; identifying the components containing noise using statistical measures and a Gaussian mixture model; reconstructing signals without noise components and testing methods}
+%\clearpage
+\section{Languages}
+\cvlanguage{Danish}{Native}{}
+\cvlanguage{English}{Fluent}{}
+\cvlanguage{German}{Basic}{}
+
+\section{Computer skills}
+\cvitem{Basic}{\small HTML, CSS, Qt, R, C++}
+\cvitem{Intermediate}{\small Python, C, C$\sharp$, Latex, Arduino, Java, Android}
+\cvitem{Expert}{\small Matlab, LabVIEW}
+\cvitem{Tools}{\small Visual Studio, Git, Eclipse, Android Studio}
+\cvitem{Miscellaneous}{\small Windows, MS Office, Linux}
+
+\section{Qualities}
+\cvitem{Personal skills:}{Enthusiastically engaging new problems, eager to develop new skills, hands-on approach to development and testing}
+\cvitem{Experience with:}{High level programming languages, digital signal processing, data exploration and visualisation, machine learning, electronics, DIY projects}
+\cvitem{International Experience:}{Travelled through Asia for 6 months using only terrestrial transportation; spends a month each year abroad; weekly interaction with foreign students through IAESTE}
+
+\end{document}
